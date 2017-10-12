@@ -33,9 +33,13 @@ class FollowerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$userId)
     {
-        //
+        $follow = new Follower;
+        $follow->user_id = auth()->user()->id;
+        $follow->follower_id = $userId;
+        $follow->save();
+        return back();
     }
 
     /**

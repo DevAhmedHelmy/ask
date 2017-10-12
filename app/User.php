@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Answer;
+use App\Like;
 use App\Question;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -32,5 +33,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Answer::class);
     }
-    
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
+    }
 }

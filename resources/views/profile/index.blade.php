@@ -5,6 +5,18 @@
         <div class="profile-header">
             <h2>{{$user->name}}</h2>
             <p>{{$user->email}}</p>
+            @if(! Auth::check())
+            <div>
+                <form action="/follow/{{$user->id}}" method="POST">
+                {{ csrf_field() }}
+                
+                <button type="submit" class="btn btn-primary">
+                  Follow
+                </button>
+              </form>
+            </div>
+            @endif
+           
         </div>
   </div>
 	<div class="col-md-10 col-md-offset-1">
@@ -59,7 +71,13 @@
                                 <p>{{$question->answers->answer}}</p>
                             </div>
                             <div class="item-footer">
-                                <p>like and comment</p>
+                                <form action="/likes/{{$question->user->id}}/question/{{$question->id}}"          method="POST">
+                                  {{ csrf_field() }}
+                                  
+                                  <button type="submit" class="btn btn-link">
+                                    <img src="/image/if_heart_1055045.png" alt="" width="40">
+                                  </button>
+                                </form>
                             </div>
                         </div>
                         @endforeach
@@ -91,7 +109,7 @@
                                        <img src="/image/if_heart_1055045.png" alt="">
                                     </div>
                                     <div class="count">
-                                       55
+                                       {{$countLikes}}
                                    </div>
                                    <div>
                                        Likes

@@ -33,9 +33,22 @@ class LikeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$userId,$questionId)
     {
-        //
+        $userIds = Like::where('user_id', '=',$userId )->where('question_id', '=', $questionId)->first();
+        if($userIds == null)
+        {
+
+            $like = new Like;
+            $like->user_id =$userId;
+            $like->question_id =$questionId;
+            $like->save();
+            return back();
+
+        }else {
+            return "this user is liked";
+        }
+
     }
 
     /**

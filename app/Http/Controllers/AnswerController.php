@@ -16,6 +16,7 @@ class AnswerController extends Controller
     public function index($id)
     {
         $question = Question::findOrFail($id);
+  
         return view('answers.index',compact('question'));
     }
 
@@ -35,9 +36,17 @@ class AnswerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$userId,$questionId)
     {
         $answer = new Answer;
+        $answer->user_id = auth()->user()->id;
+        $answer->owner_id = $userId;
+        $answer->question_id = $questionId;
+        $answer->answer = $request->answer;
+        $answer->is_anonymous = $request->is_anonymous;
+        $answer->save();
+        return redirect('/questions');
+
         
     }
 

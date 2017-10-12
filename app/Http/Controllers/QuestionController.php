@@ -41,8 +41,8 @@ class QuestionController extends Controller
 
         $question = new Question;
 
-        $question->user_id = auth()->id();
-        $question->owner_id =$userId;
+        $question->user_id = $userId;
+        $question->owner_id = auth()->id();
         $question->is_anonymous = $request->is_anonymous;
         $question->questions = $request->question;
         $question->save();

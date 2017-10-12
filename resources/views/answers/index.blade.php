@@ -11,16 +11,18 @@
                            <h4>{{$question->questions}}</h4>
                        </div>
                        <div class="askBox-form">
-                           <form action="/answers" method="POST" accept-charset="utf-8">
+                           <form action="/answers/{{$question->user->id}}/question/{{$question->id}}" 
+                              method="POST" 
+                                accept-charset="utf-8">
                                 {{csrf_field()}}
-                                <input type="hidden" value="{{$question->id}}" name="question_id">
+                                
                                <div class="form-group">
                                    <textarea class="form-control" name="answer" rows="5" 
                                    placeholder="what is your answers?"></textarea>
                                </div>
                                <div class="form-group">
                                     <label>
-                                        Ask anonymously
+                                        <input type="checkbox" name="is_anonymous" value="1">Ask anonymously
                                     </label>
                                    <button class="btn btn-warning">Answer</button>
                                </div>
