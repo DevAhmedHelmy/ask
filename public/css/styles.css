@@ -1,0 +1,291 @@
+/* override bootstrap styles */
+@import url('http://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
+
+.navbar-form input, .form-inline input {
+  width:auto;
+}
+*{
+    box-sizing: border-box;
+}
+
+body {
+ 
+  color:#646464;
+  background-color:#4A4A50;
+}
+
+h1,h2,h3,.highlight,.navbar a,#masthead h4 {
+  font-family:'Oswald',arial narrow,sans-serif;
+}
+
+footer {
+
+  margin-top:40px;
+  padding-top:40px;
+  padding-bottom:40px;
+  background-color:#cecece;
+ 
+}
+
+
+#masthead {
+  min-height:199px;
+  background-color:#000044;
+  color:#aaaacc;
+}
+
+#masthead h1 {
+  font-size: 55px;
+  line-height: 1;
+  color:#fefeff;
+  margin-top:50px;
+}
+
+#masthead .well {
+  margin-top:31px;
+  background-color:#111166;
+  border-color:#000022;
+  color:#efefff;
+  min-height:127px;
+}
+
+#topPanel {
+  padding-top:0px;
+  padding-left:22px;
+  padding-right:22px;
+}
+#topPanel .panel-body {
+  padding-top:0px;
+}
+
+.navbar.affix {
+  position:fixed;
+  top:0;
+  width:100%;
+}
+
+.top-spacer {
+  background-color:#ffffff;
+  height:40px;
+}
+
+a,a:hover {
+  color:#223344;
+  text-decoration:none;
+}
+
+.icon-bar {
+  background-color:#fff;
+}
+
+@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 80px;
+  }
+}
+
+.navbar-bright {
+  background-color:#111166;
+  color:#fff;
+  margin-bottom: 0;
+  border-width: 0;
+}
+
+.navbar-bright a, .navbar-bright .navbar-brand, #masthead h4 {
+  color:#ccccdd;
+  font-size:14px;
+  text-transform: uppercase;
+  letter-spacing:.08em;
+}
+
+.navbar-bright li > a:hover {
+  background-color:#000044;
+}
+
+.dropdown-menu {
+  min-width: 250px;
+}
+
+.caret {
+  color:#fff;
+}
+
+.navbar-toggle {
+  color:#fff;
+  border-width:0;
+}
+
+.navbar-toggle:hover {
+  background-color:#fff;
+}
+
+.panel {
+  border-color:transparent;
+  border-radius:0;
+}
+
+.thumbnail {
+  margin-bottom:8px;
+}
+
+.img-container {
+  overflow:hidden;
+  height:170px;
+}
+
+.img-container img {
+  min-width:280px;
+  min-height:180px;
+  max-width:380px;
+  max-height:280px;
+}
+
+.txt-container {
+  overflow:hidden;
+  height:100px;
+}
+
+.panel .lead {
+  overflow:hidden;
+  height:90px;
+}
+
+.label-float{
+  margin:0 auto;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width:100%;
+  opacity:.9;
+  padding:6px;
+  color:#fff;
+}
+    
+.btn-twitter {background-color:#4099FF;color:#fff;}
+.btn-facebook {background-color:#3B5998;color:#fff;}
+.btn-google-plus {background-color:#d34836;color:#fff;}
+
+.btn-twitter:hover {background-color:#3088FF;color:#62BBFF;}
+.btn-facebook:hover {background-color:#2A4998;color:#4C6BBA;}
+.btn-google-plus:hover {background-color:#C23836;color:#E45A58;}
+
+/*question*/
+.question-form 
+{
+    background-color: #ffffed;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 0 10px 0;
+}
+.question-form .askBox-heading 
+{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px 0 0px 12px;
+}
+.question-form span
+{
+  font-size:16px; 
+}
+.question-form .askBox-form form button
+{
+    float:right; 
+}
+.item-page .items
+{
+    background-color: #fff;
+    padding: 15px 20px 0;
+    position: relative;
+}
+.item-page .items .item-footer
+{
+        padding: 15px 0;
+}  
+.item-page .items .item-footer span
+{
+  float: right;
+  display: inline-block;
+}
+.item-page .items .item-footer span a.btn-primary
+{
+    border-radius:18px; 
+    background: #fff;
+    border: 2px solid #d5d5dd;
+    color: #FF643C;
+    padding: 5px 8px;
+}
+.item-page .items .item-footer span a.btn-primary:hover
+{
+    background-color: #FF643C;
+    border-color: #FF643C;
+    color: #fff;
+}
+.friends
+{
+    margin-top:8px; 
+    background-color:#fff; 
+}
+.header
+{
+    background-color:#f8f8f8
+}
+.navbar
+{
+    margin-bottom:0px;
+    border:0px;
+}
+
+/*profile*/
+
+.profile-header
+{
+    background-color: #ccc;
+    height: 150px;
+    padding: 35px 0 15px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.profile-details
+{
+    background-color: #fff;
+    margin-top:10px; 
+    padding: 15px 10px 15px 0px;
+    text-align:center; 
+}
+.profile-details img
+{
+    width:40px 
+} 
+.profile-details .about-me
+{
+    padding: 15px 0px 20px 10px;
+}   
+.profile-details .about-me .about-header
+{
+    display:inline-block;
+    float:left; 
+    margin: 0 
+}
+.profile-details .about-me .edit
+{
+    display: inline-block;
+    float: right;
+}
+
+/*search*/
+
+
+.search
+{
+    padding: 45px 15px 45px 15px;
+}
+.search-header
+{
+  background-color: #fff;
+  padding: 10px 0px 20px 15px;
+    margin: 0 0 10px 0;
+}
+.media-search
+{
+      padding: 5px 0 10px 0;
+}
