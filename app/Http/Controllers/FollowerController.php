@@ -35,11 +35,21 @@ class FollowerController extends Controller
      */
     public function store(Request $request,$userId)
     {
-        $follow = new Follower;
-        $follow->user_id = auth()->user()->id;
-        $follow->follower_id = $userId;
-        $follow->save();
-        return back();
+        $userIds = Follower::where('follower_id', '=',$userId )->first();
+        if($userIds == null)
+        {
+
+            $follow = new Follower;
+            $follow->user_id = auth()->user()->id;
+            $follow->follower_id = $userId;
+            $follow->save();
+            return back();
+
+        }else {
+            $userIds->delete();
+            return back();
+        }
+        
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Follower;
 use App\Question;
 use Illuminate\Http\Request;
 
@@ -14,10 +15,11 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        $questions = Question::whereDoesntHave('answers')->get();
-        $questionCount = Question::whereDoesntHave('answers')->count();
+        $questions = Question::whereDoesntHave('answers')->where('owner_id','=',auth()->user()->id)->get();
+        $questionCount = Question::whereDoesntHave('answers')->where('owner_id','=',auth()->user()->id)->count();
+        $friends = Follower::where('user_id','=',auth()->user()->id)->get();
      
-        return view('questions.index',compact('questions','questionCount'));
+        return view('questions.index',compact('questions','questionCount','friends'));
     }
 
     /**

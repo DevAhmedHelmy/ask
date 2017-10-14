@@ -223,6 +223,48 @@ a,a:hover {
 {
     margin-top:8px; 
     background-color:#fff; 
+    padding: 10px 10px 20px 10px;
+}
+/**/
+.help, .socail
+{
+  margin-top:8px; 
+  background-color:#fff; 
+  padding: 10px 10px 20px 10px;
+}
+.socail ul{
+  padding:0 ;
+  margin-top: 15px
+}
+.socail .links li
+{
+  display: inline-block;
+  list-style: none;
+  margin: 0px 5px 0 5px;
+}
+.socail .links li a,
+.socail .lang
+{
+  color:#FF643C
+}
+
+hr
+ {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #eee;
+ }
+.socail .socail-icon li
+{
+  display: inline-block;
+}
+.copyright
+{
+  direction: ltr;
+  float: right;
+
+         
 }
 .header
 {
@@ -288,4 +330,23 @@ a,a:hover {
 .media-search
 {
       padding: 5px 0 10px 0;
+}
+
+.form-like form,ul
+{
+    display:inline-block; 
+}
+.form-like ul
+{
+  float:right; 
+}
+.form-like ul li
+{
+  display:inline-block; 
+  margin: 15px 30px 0 0;
+}
+.form-like ul li .fa
+{
+    font-size: 20px;
+    font-weight: bolder;
 }

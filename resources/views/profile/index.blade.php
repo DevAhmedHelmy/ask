@@ -5,7 +5,7 @@
         <div class="profile-header">
             <h2>{{$user->name}}</h2>
             <p>{{$user->email}}</p>
-            @if(! Auth::check())
+  
             <div>
                 <form action="/follow/{{$user->id}}" method="POST">
                 {{ csrf_field() }}
@@ -15,7 +15,7 @@
                 </button>
               </form>
             </div>
-            @endif
+             
            
         </div>
   </div>
@@ -48,36 +48,49 @@
                         @foreach($questions as $question)
                         <div class="items">
                             <div class="item-header">
-                                <h6>{{$question->questions}} ?</h6>
-                            </div>
-                            <div class="item-properties">
                                 <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="user-img">
-                                            <img src="#" alt="user">
-                                        </div>
+                                    <div class="col-md-6">
+                                        <h3>{{$question->questions}} </h3>
                                     </div>
-                                    <div class="col-md-10">
-                                        <div class="user-details">
-                                            <p>{{$question->user->name}} 
-                                                <span>{{$question->created_at->diffForHumans()}}</span></p>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                          <div class="col-md-2">
+                                              <div class="user-img">
+                                                <img src="#" alt="user Image">
+                                              </div>
+                                          </div>
+                                          <div class="col-md-10">
+                                            <div class="user-details">
+                                              <p>{{$question->user->name}}</p>
+                                            </div>
+                                          </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                                 
-                                
+                            </div>
+                            <div class="item-properties">
+                                {{$question->created_at->diffForHumans()}}
                             </div>
                             <div class="item-content">
-                                <p>{{$question->answers->answer}}</p>
+                                <h4>{{$question->answers->answer}}</h4>
                             </div>
                             <div class="item-footer">
-                                <form action="/likes/{{$question->user->id}}/question/{{$question->id}}"          method="POST">
-                                  {{ csrf_field() }}
-                                  
-                                  <button type="submit" class="btn btn-link">
-                                    <img src="/image/if_heart_1055045.png" alt="" width="40">
-                                  </button>
+                              <div class="form-like">
+                                 <form action="/likes/{{$question->user->id}}/question/{{$question->id}}"          method="POST">
+                                    {{ csrf_field() }}
+                                    
+                                    <button type="submit" class="btn btn-link">
+                                      <img src="/image/if_heart_1055045.png" alt="" width="30">
+                                    </button>
                                 </form>
+                                <ul class="list-unstyled"> 
+                                  <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a></li>
+                                </ul>
+                              </div>
+                                
                             </div>
                         </div>
                         @endforeach
@@ -120,7 +133,7 @@
                                        <img src="/image/if_group_2431357.png" alt="">
                                     </div>
                                     <div class="count">
-                                       55
+                                       {{$countFollowers}}
                                    </div>
                                    <div>
                                        Followers

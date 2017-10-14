@@ -32,27 +32,32 @@
                     @endif
                 </div>
                 <div class="col-md-4">
-                   <div class="friends">
-                       <div class="media">
-                          <div class="media-left">
-                            <a href="#">
-                              <img class="media-object" src="..." alt="...">
-                            </a>
-                          </div>
-                          <div class="media-body">
-                            <h4 class="media-heading">Media heading</h4>
-                            ...sdgdsg
-                          </div>
-                          <div class="media-right">
-                            <a href="#">Ask</a>
-                          </div>
-                        </div>
-                   </div>
+                    
                    <div class="help">
                        help
                    </div>
                    <div class="socail">
-                       socail
+                       <ul class="links">
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                       </ul>
+                       <ul class="socail-icon">
+                          <li><a href="#"><img src="/image/ask.png" alt=""></a></li>
+                          <li><a href="#"><img src="/image/facebook.png" alt=""></a></li>
+                          <li><a href="#"><img src="/image/inst.png" alt=""></a></li>
+                          <li><a href="#"><img src="/image/twitter.png" alt=""></a></li>
+                           
+                          
+                       </ul>
+                       <hr>
+                        <a class="lang" href="#"><i class="fa fa-language" aria-hidden="true"></i> 
+                              English</a>
+                        <span class="copyright">© Ask.fm 2017</span>
                    </div>
                 </div>
                 

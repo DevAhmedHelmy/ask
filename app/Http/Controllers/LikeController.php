@@ -46,7 +46,8 @@ class LikeController extends Controller
             return back();
 
         }else {
-            return "this user is liked";
+            $userIds->delete();
+            return back();
         }
 
     }

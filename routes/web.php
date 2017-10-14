@@ -39,6 +39,8 @@ Route::post('{id}/ask','FriendsController@store');
 
 // likes
 Route::post('/likes/{user_id}/question/{question_id}','LikeController@store');
-
+// follower 
 Route::post('/follow/{user_id}','FollowerController@store');
+// notification
+Route::get('notification','NotificationController@index');
 

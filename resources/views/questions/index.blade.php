@@ -29,6 +29,10 @@
                 </div>
                 <div class="col-md-4">
                    <div class="friends">
+                      <h4>Your Friends</h4>
+                      <hr>
+                    @if(! empty($friends))
+                      @foreach($friends as $userfriends)
                        <div class="media">
                           <div class="media-left">
                             <a href="#">
@@ -36,19 +40,42 @@
                             </a>
                           </div>
                           <div class="media-body">
-                            <h4 class="media-heading">Media heading</h4>
-                            ...sdgdsg
+                            <h4 class="media-heading">{{$userfriends->user->name}}</h4>
+                              {{$userfriends->user->email}}
                           </div>
                           <div class="media-right">
-                            <a href="#">Ask</a>
+                            <a href="/{{$userfriends->user->name}}/question" class="btn btn-primary">Ask</a>
                           </div>
                         </div>
+                        <hr>
+                        @endforeach
+                        @endif
                    </div>
                    <div class="help">
                        help
                    </div>
                    <div class="socail">
-                       socail
+                       <ul class="links">
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                          <li><a href="#">ask</a></li>
+                       </ul>
+                       <ul class="socail-icon">
+                          <li><a href="#"><img src="/image/ask.png" alt=""></a></li>
+                          <li><a href="#"><img src="/image/facebook.png" alt=""></a></li>
+                          <li><a href="#"><img src="/image/inst.png" alt=""></a></li>
+                          <li><a href="#"><img src="/image/twitter.png" alt=""></a></li>
+                           
+                          
+                       </ul>
+                       <hr>
+                        <a class="lang" href="#"><i class="fa fa-language" aria-hidden="true"></i> 
+                              English</a>
+                        <span class="copyright">© Ask.fm 2017</span>
                    </div>
                 </div>
                 

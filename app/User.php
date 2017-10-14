@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Answer;
+use App\Follower;
 use App\Like;
 use App\Question;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -40,5 +41,9 @@ class User extends Authenticatable
     public function questions()
     {
         return $this->hasMany(Question::class);
+    }
+    public function followers()
+    {
+        return $this->hasMany(Follower::class);
     }
 }

@@ -23,7 +23,7 @@
         <li><a href="/questions">Questions</a></li>
         <li><a href="/profile/{{auth()->user()->id}}">Profile</a></li>
         <li><a href="/friends">Friends</a></li>
-        <li><a href="#">Notifications</a></li>
+        <li><a href="notification">Notifications</a></li>
 
         <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>

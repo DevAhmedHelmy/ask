@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Follower;
 use App\Question;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,7 +28,8 @@ class HomeController extends Controller
     {
         
         $questions = Question::with('answers')->whereHas('answers')->get();
-        return view('feed.index',compact('questions'));
+        $friends = Follower::where('user_id','=',auth()->user()->id)->get();
+        return view('feed.index',compact('questions','friends'));
     }
     
 }
